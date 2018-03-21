@@ -16,6 +16,18 @@
 #### can start later
 `array.indexOf(10, 3)` -> Returns the index of 10, but only starts looking at index 3.
 
+var ar1 = [2,3,4,5,6,43,3,3,3]
+var first = ar1.indexOf(3) 
+
+var nextIdx = 0
+var all2s = []
+while(nextIdx >= 0){
+  var idx = ar1.indexOf(2, nextIdx);
+  if(idx>=0){
+    all2s.push(idx)
+    nextIdx = idx + 1;
+  }
+}
 ### split
 
 #### breaks a string based on a character
@@ -102,7 +114,7 @@ array.map( function(item){
 `array.filter( function( item, index, arr) { } )`
 
 `array.filter( ( item, index, arr) => { } )`
-
+##### callback works like an if statement
 ##### the callback is used to check if the item goes into the new array
 
 
